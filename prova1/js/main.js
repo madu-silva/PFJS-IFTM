@@ -15,6 +15,13 @@ window.addEventListener("DOMContentLoaded", async () => {
     );
 
     uiFunctions.exibirFilmes(movieCards);
+
+     const toggleThemeButton = document.getElementById("toggleTheme");
+     toggleThemeButton.addEventListener("click", () => {
+       document.body.classList.toggle("dark-mode");
+       toggleThemeButton.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+     });
+     
   } catch (error) {
     console.error("Erro ao carregar os filmes:", error);
   }
